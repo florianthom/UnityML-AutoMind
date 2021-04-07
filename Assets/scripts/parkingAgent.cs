@@ -327,7 +327,7 @@ public class parkingAgent : Agent
             Vector3 rotation = item.Item2;
             bool hittet = item.Item3;
             float rotation1 = item.Item4;
-            //int radius = 2;
+            int radius = 2;
 
             if (hittet)
             {
@@ -337,12 +337,11 @@ public class parkingAgent : Agent
                 //Debug.DrawLine(sensorStartPos + Quaternion.AngleAxis(rotation1, this.transform.up) * this.transform.forward * radius, sensorStartPos + Quaternion.AngleAxis(rotation1, this.transform.up) * this.transform.forward * this.SensorLength, Color.Lerp(Color.red, Color.white, lengthToHit / this.SensorLength));
 
                 Debug.DrawLine(sensorStartPos, sensorStartPos + Quaternion.AngleAxis(rotation1, this.transform.up) * this.transform.forward * this.SensorLength, Color.Lerp(Color.red, Color.white, lengthToHit / this.SensorLength));
-
-
             }
             else
             {
-                Debug.DrawLine(sensorStartPos, sensorStartPos + Quaternion.AngleAxis(rotation1, this.transform.up) * this.transform.forward * this.SensorLength, Color.white);
+                //Debug.DrawLine(new Vector3(0,0,0), new Vector3(0,0,0) + new Vector3(0,0,1) * 10000, Color.red);
+                Debug.DrawLine(sensorStartPos, sensorStartPos + Quaternion.AngleAxis(rotation1, this.transform.up) * this.transform.forward * this.SensorLength, Color.green);
             }
         }
     }
