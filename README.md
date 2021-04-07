@@ -17,13 +17,17 @@ Other high-level categories of ai like supervised- or unsupervised learning can 
 
 ## High-level concept
 The main goal of this project is 1st to spawn a cab, 2nd which has to find an appropriate parking slot and 3rd has to park there 4th at best without damaging other cars. To archieve this, this car is equiped with 8 sensors, which can be seen at the following image.
-![alt text](.github/images/cap_sensors.png)
+
+<p align="center">
+    <img src=".github/images/cap_sensors.png" />
+</p>
+
 This sensors measure the distance to the next obstacles. This information is send to the underlying ai.
-Then a parking simulation is introduced with other cars and a parking slot (green). According to a so called reward-function (reinforcement learning) the car gets a positiv/negativ reward according to its actions. The reward-function emits a high negativ reward if the cab hits other cars, a low negativ reward if it hits some random obstacles or a high positiv reward if it parks at the parking slot. With the given sensors the car has to figure out to not hit other obstacles and is forced (to archive best loss of reward-function) to find the appropiate parking slot. The scence is replecated multiple times and resets each approx. 20s.
+Then a parking simulation is introduced with other cars and a parking slot (red). According to a so called reward-function (reinforcement learning) the car gets a positiv/negativ reward according to its actions. The reward-function emits a high negativ reward if the cab hits other cars, a low negativ reward if it hits some random obstacles or a high positiv reward if it parks at the parking slot. With the given sensors the car has to figure out to not hit other obstacles and is forced (to archive best loss of reward-function) to find the appropiate parking slot. The scence is replecated multiple times and resets each approx. 20s.
 
 ## Story time
 There are a lot of small stories connected with this simulation, especially because there are and there were a lot of errors implemented by me (e.g. the reward-function).
-- the classic: after some training the car searches the next wall and drives against that wall the whole time
+- the classic: after some training the car searched the next wall and drives against that wall the whole time
     - reason (likely): According to the configuration the car must drive. I it hits another car it gets a high negativ award, if it hits a wall it gets a low negativ award -> i hope you see the point
 - At some point of the training, it managed to crash into another car after reseted every time. It crashed into that car in a very specific angle so that the wheel was lifted and could continue to drive
     - reason (likely): The reason is somehow like described above. The ai probably checked that if it hits that car in that angly it gets a high negativ award at first, but after that, it get no negativ award at all! -> i hope you get point
