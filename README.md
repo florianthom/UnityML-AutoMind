@@ -28,7 +28,7 @@ Then a parking simulation is introduced with other cars and a parking slot (red)
 ## Story time
 There are a lot of small stories connected with this simulation, especially because there are and there were a lot of errors implemented by me (e.g. the reward-function).
 - the classic: after some training the car searched the next wall and drives against that wall the whole time
-    - reason (likely): According to the configuration the car must drive. I it hits another car it gets a high negativ award, if it hits a wall it gets a low negativ award -> i hope you see the point
+    - reason (likely): According to the configuration the car must drive. If it hits another car it gets a high negativ award, if it hits a wall it gets a low negativ award. So i guess it leaned that "drive against wall" is better than probably hit some cars -> i hope you see the point
 - At some point of the training, it managed to crash into another car after reseted every time. It crashed into that car in a very specific angle so that the wheel was lifted and could continue to drive
     - reason (likely): The reason is somehow like described above. The ai probably checked that if it hits that car in that angly it gets a high negativ award at first, but after that, it get no negativ award at all! -> i hope you get point
 
