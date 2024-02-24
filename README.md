@@ -1,4 +1,4 @@
-# Car-AI-Unity
+# UnityML: AutoMind
 This projects aims to simulated a parking-scenario in which a cab has to find an appropriate parking slot in a given time window and at best without hitting other obstacles. This projects was implemented using unity and its amazing feature ml-agents.
 
 ![alt text](.github/images/overview.PNG)
